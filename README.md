@@ -1,9 +1,9 @@
 # Extended Kalman Filter Project 
-Self-Driving Car Engineer Nanodegree Program
-This is my completed assignment.
+This is my completed assignment for Udacity's Self-Driving Car Engineer Nanodegree Program
 
 This project utilizes a kalman filter to estimate the state of a moving object of interest with noisy lidar and radar measurements.  The kalman filter recieves alternating sensor measurements from lidar and radar sensors supplied by a simulator.  It goes through a constant cycle of predicting the location and velocity after a small step in time, then updating its belief based on a sensor measurement, factoring in uncertainty in both the prediction and update operations.  The lidar measurements are supplied in a cartesian coordinate system.  However, the radar measurements are supplied in a polar coordinate system which requires a nonlinear transformation using a first order Taylor series expansion (Jacobian matrix).
 When the simulator and the C++ program are run together, the simulator starts out displaying an X and Y axis at the starting point where the car begins.  The sensor measurements are given as if the sensors were located at that origin and measuring the position of the car.  When the simulation is started, the car begins to move and the car's position is considered the ground truth.  The scattered red and blue dots represent the noisy radar and lidar measurements, which are passed to the C++ program.  The C++ program returns its beliefs about the car's position to the simulator and the simulator plots those coordinates as green triangles.  As the car travels its path, you can see that the extended kalman filter beliefs are very close to the car's ground truth position.  The Root Mean Squared error between the ground truth and the extended kalman filter's beliefs is calculated at each step and returned to the simulator where you can see the X position, Y position, X velocity, and Y velocity RMSE values.
+This repo includes an mp4 video of the simulator and my C++ program running.
 
 This project involves the Term 2 Simulator which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases).  The linux simulator does not work with Ubuntu 20 (Ubuntu 16 or 18 recommended).  When starting the simulator, select the EKF simulation.
 
